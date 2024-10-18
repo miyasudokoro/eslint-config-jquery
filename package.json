@@ -1,10 +1,13 @@
 {
   "name": "eslint-config-jquery",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "jQuery eslint config",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "eslint ."
+    "test": "npm run copy-fixtures && npm run lint",
+    "lint": "eslint",
+    "copy-fixtures": "node copy-fixtures.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +28,13 @@
   ],
   "author": "Gaidarenko Oleg <markelog@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "^2.9.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  },
   "devDependencies": {
-    "eslint": "^8.5.0"
+    "eslint": "^9.12.0"
   }
 }

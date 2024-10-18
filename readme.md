@@ -6,11 +6,19 @@
 npm install --save-dev eslint-config-jquery
 ```
 
-Configure ESLint with a `.eslintrc` file using the following contents:
-```json
-{
-	"extends": "jquery"
-}
+Version 4.0.0 and above work for ESLint version 9.0.0 and above. Use version 3.0.2 for older ESLint versions.
+
+In your eslint.config file, import it and add it to your flat config array.
+
+```javascript
+import jquery from "eslint-config-jquery";
+
+export default [
+    // ... any other configurations,
+    jquery,
+    // ... any other configurations
+];
+
 ```
 
 ## Status
@@ -20,3 +28,11 @@ This config follows the spirit of the jQuery [code style](https://contribute.jqu
 ## Semver policy
 
 Same approach as in ESLint, see https://github.com/eslint/eslint#user-content-semantic-versioning-policy.
+
+## Testing
+
+To avoid a circular dependency, testing copies JQuery source code into the test directory before running linting for
+this project. 
+
+Note: JQuery 3.7.1 has an invalid eslint ignore statement that makes the tests fail for this project, but that must be 
+fixed in JQuery itself.
