@@ -34,5 +34,3 @@ Same approach as in ESLint, see https://github.com/eslint/eslint#user-content-se
 To avoid a circular dependency, testing copies JQuery source code into the test directory before running linting for
 this project. 
 
-Note: JQuery 3.7.1 has an invalid eslint ignore statement that makes the tests fail for this project, but that must be 
-fixed in JQuery itself.
