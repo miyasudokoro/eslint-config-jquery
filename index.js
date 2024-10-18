@@ -1,30 +1,37 @@
-module.exports = {
+
+import stylistic from "@stylistic/eslint-plugin-js";
+
+export default {
+	plugins: {
+		"@stylistic/js": stylistic
+	},
 	rules: {
-		"no-negated-in-lhs": "error",
+		"no-unsafe-negation": "error",
 		"no-cond-assign": [ "error", "except-parens" ],
-		curly: [ "error", "all" ],
-		"object-curly-spacing": [ "error", "always" ],
-		"computed-property-spacing": [ "error", "always" ],
-		"array-bracket-spacing": [ "error", "always" ],
-		eqeqeq: [ "error", "smart" ],
+		"curly": [ "error", "all" ],
+		"@stylistic/js/object-curly-spacing": [ "error", "always" ],
+		"@stylistic/js/computed-property-spacing": [ "error", "always" ],
+		"@stylistic/js/array-bracket-spacing": [ "error", "always" ],
+		"eqeqeq": [ "error", "smart" ],
 		"no-unused-expressions": "error",
 		"no-sequences": "error",
 		"no-nested-ternary": "error",
 		"no-unreachable": "error",
-		"wrap-iife": [ "error", "inside" ],
+		"@stylistic/js/wrap-iife": [ "error", "inside" ],
 		"no-caller": "error",
-		quotes: [ "error", "double" ],
+		"@stylistic/js/quotes": [ "error", "double" ],
 		"no-undef": "error",
 		"no-unused-vars": [
 			"error",
 			{
 				args: "all",
-				argsIgnorePattern: "^_"
+				argsIgnorePattern: "^_",
+				caughtErrors: "none"
 			}
 		],
-		"operator-linebreak": [ "error", "after" ],
-		"comma-style": [ "error", "last" ],
-		camelcase: [
+		"@stylistic/js/operator-linebreak": [ "error", "after" ],
+		"@stylistic/js/comma-style": [ "error", "last" ],
+		"camelcase": [
 			"error",
 			{
 				properties: "never"
@@ -36,7 +43,7 @@ module.exports = {
 				allowPattern: "^[a-z]+(_[a-z]+)+$"
 			}
 		],
-		"max-len": [
+		"@stylistic/js/max-len": [
 			"error",
 			{
 				code: 100,
@@ -45,24 +52,24 @@ module.exports = {
 				ignoreRegExpLiterals: true
 			}
 		],
-		"no-mixed-spaces-and-tabs": "error",
-		"no-trailing-spaces": "error",
+		"@stylistic/js/no-mixed-spaces-and-tabs": "error",
+		"@stylistic/js/no-trailing-spaces": "error",
 		"no-irregular-whitespace": "error",
 		"no-multi-str": "error",
-		"comma-dangle": [ "error", "never" ],
-		"comma-spacing": [
+		"@stylistic/js/comma-dangle": [ "error", "never" ],
+		"@stylistic/js/comma-spacing": [
 			"error",
 			{
 				before: false,
 				after: true
 			}
 		],
-		"space-before-blocks": [ "error", "always" ],
-		"space-in-parens": [ "error", "always" ],
-		"keyword-spacing": [ 2 ],
-		"template-curly-spacing": [ "error", "always" ],
-		semi: [ "error", "always" ],
-		"semi-spacing": [
+		"@stylistic/js/space-before-blocks": [ "error", "always" ],
+		"@stylistic/js/space-in-parens": [ "error", "always" ],
+		"@stylistic/js/keyword-spacing": [ 2 ],
+		"@stylistic/js/template-curly-spacing": [ "error", "always" ],
+		"@stylistic/js/semi": [ "error", "always" ],
+		"@stylistic/js/semi-spacing": [
 			"error",
 			{
 
@@ -71,35 +78,35 @@ module.exports = {
 				after: true
 			}
 		],
-		"no-extra-semi": "error",
-		"space-infix-ops": "error",
-		"eol-last": "error",
-		"lines-around-comment": [
+		"@stylistic/js/no-extra-semi": "error",
+		"@stylistic/js/space-infix-ops": "error",
+		"@stylistic/js/eol-last": "error",
+		"@stylistic/js/lines-around-comment": [
 			"error",
 			{
 				beforeLineComment: true
 			}
 		],
-		"linebreak-style": [ "error", "unix" ],
+		"@stylistic/js/linebreak-style": [ "error", "unix" ],
 		"no-with": "error",
-		"brace-style": "error",
-		"space-before-function-paren": [ "error", "never" ],
+		"@stylistic/js/brace-style": "error",
+		"@stylistic/js/space-before-function-paren": [ "error", "never" ],
 		"no-loop-func": "error",
-		"no-spaced-func": "error",
-		"key-spacing": [
+		"@stylistic/js/function-call-spacing": [ "error", "never" ],
+		"@stylistic/js/key-spacing": [
 			"error",
 			{
 				beforeColon: false,
 				afterColon: true
 			}
 		],
-		"space-unary-ops": [
+		"@stylistic/js/space-unary-ops": [
 			"error",
 			{
 				words: false,
 				nonwords: false
 			}
 		],
-		"no-multiple-empty-lines": 2
+		"@stylistic/js/no-multiple-empty-lines": 2
 	}
 };
