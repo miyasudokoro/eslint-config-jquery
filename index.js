@@ -8,11 +8,11 @@ export default {
 	rules: {
 		"no-unsafe-negation": "error",
 		"no-cond-assign": [ "error", "except-parens" ],
-		"curly": [ "error", "all" ],
+		curly: [ "error", "all" ],
 		"@stylistic/js/object-curly-spacing": [ "error", "always" ],
 		"@stylistic/js/computed-property-spacing": [ "error", "always" ],
 		"@stylistic/js/array-bracket-spacing": [ "error", "always" ],
-		"eqeqeq": [ "error", "smart" ],
+		eqeqeq: [ "error", "smart" ],
 		"no-unused-expressions": "error",
 		"no-sequences": "error",
 		"no-nested-ternary": "error",
@@ -31,7 +31,7 @@ export default {
 		],
 		"@stylistic/js/operator-linebreak": [ "error", "after" ],
 		"@stylistic/js/comma-style": [ "error", "last" ],
-		"camelcase": [
+		camelcase: [
 			"error",
 			{
 				properties: "never"

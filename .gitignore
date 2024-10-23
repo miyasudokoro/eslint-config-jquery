@@ -3,5 +3,4 @@ npm-debug.log
 package-lock.json
 yarn.lock
 .idea
-eslint-report.html
-/test
+/test/fixtures

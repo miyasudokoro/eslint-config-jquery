@@ -1,6 +1,6 @@
 import { promisify } from "node:util";
 import chip from "node:child_process";
-import fs from "node:fs";
+import fs from "node:fs/promises";
 import path from "node:path";
 
 const exec = promisify( chip.exec );
@@ -10,10 +10,10 @@ await exec( "npm install --no-save jquery" );
 const fixtures = path.join( ".", "test", "fixtures" );
 
 try {
-	await fs.promises.mkdir( path.join( ".", "test" ) );
-	await fs.promises.mkdir( fixtures );
+	await fs.mkdir( path.join( ".", "test" ) );
+	await fs.mkdir( fixtures );
 } catch ( _ ) {
-	await fs.promises.rm(
+	await fs.rm(
 		fixtures,
 		{
 			recursive: true
@@ -22,7 +22,7 @@ try {
 
 }
 
-await fs.promises.cp(
+await fs.cp(
     path.join( ".", "node_modules", "jquery", "src" ),
     path.join( fixtures, "src" ),
     {

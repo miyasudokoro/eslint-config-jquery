@@ -6,9 +6,9 @@
 npm install --save-dev eslint-config-jquery
 ```
 
-Version 4.0.0 and above work for ESLint version 9.0.0 and above. Use version 3.0.2 for older ESLint versions.
+Version 4.0.0 or newer work with ESLint version 9.0.0 or newer and require using the flat config. Use version 3.x for older ESLint versions.
 
-In your eslint.config file, import it and add it to your flat config array.
+In your `eslint.config file`, import it and add it to your flat config array.
 
 ```javascript
 import jquery from "eslint-config-jquery";
