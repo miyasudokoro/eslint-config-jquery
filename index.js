@@ -1,4 +1,3 @@
-
 import stylistic from "@stylistic/eslint-plugin-js";
 
 export default {

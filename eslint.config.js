@@ -1,12 +1,23 @@
 import jquery from "./index.js";
 import globals from "globals";
+import stylistic from "@stylistic/eslint-plugin-js";
 
 export default [
-    jquery,
+	jquery,
 	{
-		"files": [ "test/**" ],
-		"languageOptions": {
-			"globals": {
+		files: [ "!test/**" ],
+		plugins: {
+			"@stylistic/js": stylistic
+		},
+		rules: {
+			"@stylistic/js/indent": [ "error", "tab" ],
+			"@stylistic/js/quote-props": [ "error", "as-needed" ]
+		}
+	},
+	{
+		files: [ "test/**" ],
+		languageOptions: {
+			globals: {
 				...globals.amd,
 				...globals.browser
 			}

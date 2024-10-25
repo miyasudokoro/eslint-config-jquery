@@ -28,9 +28,3 @@ This config follows the spirit of the jQuery [code style](https://contribute.jqu
 ## Semver policy
 
 Same approach as in ESLint, see https://github.com/eslint/eslint#user-content-semantic-versioning-policy.
-
-## Testing
-
-To avoid a circular dependency, testing copies JQuery source code into the test directory before running linting for
-this project. 
-
