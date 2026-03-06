@@ -21,6 +21,11 @@ export default [
 
 ```
 
+## Updating fixtures
+
+To update the fixtures for testing this configuration from jQuery source code, run script `copy-fixtures`. 
+This should be done whenever updating the version of jQuery that is found in the devDependencies.
+
 ## Status
 
 This config follows the spirit of the jQuery [code style](https://contribute.jquery.org/style-guide/js/), does not violate it and extends it.
