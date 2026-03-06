@@ -1,17 +1,17 @@
 import jquery from "./index.js";
 import globals from "globals";
-import stylistic from "@stylistic/eslint-plugin-js";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default [
 	jquery,
 	{
 		files: [ "!test/**" ],
 		plugins: {
-			"@stylistic/js": stylistic
+			"@stylistic": stylistic
 		},
 		rules: {
-			"@stylistic/js/indent": [ "error", "tab" ],
-			"@stylistic/js/quote-props": [ "error", "as-needed" ]
+			"@stylistic/indent": [ "error", "tab" ],
+			"@stylistic/quote-props": [ "error", "as-needed" ]
 		}
 	},
 	{
@@ -21,6 +21,13 @@ export default [
 				...globals.amd,
 				...globals.browser
 			}
+		}
+	},
+	{
+		files: [ "test/fixtures/src/wrapper-*.js" ],
+		rules: {
+			"no-unused-vars": [ "off" ],
+			"no-undef": [ "off" ]
 		}
 	}
 ];
