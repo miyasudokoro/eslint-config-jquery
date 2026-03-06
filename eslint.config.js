@@ -1,8 +1,9 @@
+import { defineConfig } from "eslint/config";
 import jquery from "./index.js";
 import globals from "globals";
 import stylistic from "@stylistic/eslint-plugin";
 
-export default [
+export default defineConfig( [
 	jquery,
 	{
 		files: [ "!test/**" ],
@@ -30,4 +31,4 @@ export default [
 			"no-undef": [ "off" ]
 		}
 	}
-];
+] );
